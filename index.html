@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
 
-    <script type="text/javascript" src="java.js"></script>
+
+    <title>Flashcards</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+  
+
+   
+
 </head>
+
 <body>
-    
-        <a id="test">
 
-    <h1> hoi  hoi </h1>
+        <main id="top">
+                <h1>Flashcards</h1>
+                
+                <p>Test your knowledge with this flashcard app!<br />
+                    <em>Click the card to see the answer</em></p>
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <h3>Question</h3>
+                        <span id="question"></span>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <h3>Answer</h3>
+                        <span id="answer"></span>
+                    </div>
+                </div>
+                <section class="actions">
+                    <button id="new-flashcard" class="button">Get random question</button>
+                    <button id="reset-flashcards" class="button">Reset flashcards</button>
+                </section>
+                
+                
+            
+            </main>
+        
 
+<script type="text/javascript" src="java.js"></script>
 
-</a>
-
-</body>
 </html>

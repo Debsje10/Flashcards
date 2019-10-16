@@ -1,0 +1,205 @@
+body {
+    background: rgb(197, 248, 244);
+
+    font-family: 'nunito', monospace;
+    font-size: 16px;
+    overflow-y: scroll;
+
+}
+
+main {
+    width: 80%;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: white;
+    text-align: center;
+    color: #87e2ee;
+}
+
+
+
+main p {
+    color: darkslategray;
+}
+
+button {
+    margin: 10px;
+    padding: 1.5rem;
+
+    border-radius: 10px;
+    border: 0;
+
+    background: #97cde5;
+
+    text-decoration: none;
+    outline: none;
+    box-shadow: 2px 2px #DBDBDB;
+    font-family: 'nunito', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+button:hover {
+    background: #2bcbf3;
+}
+
+button:active {
+    box-shadow: 0 5px #046b85;
+    transform: translateY(4px);
+}
+
+.navigation button {
+    font-size: .8rem;
+    background: rgb(24, 77, 168);
+}
+
+.navigation button:hover {
+    background: #13336B;
+}
+
+.card {
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    margin: 2rem auto 2rem auto;
+
+    cursor: pointer;
+
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    perspective: 30px;
+
+    transform: rotateY(180deg);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #F0F0F0;
+}
+
+.card em {
+    font-style: normal;
+    font-weight: bold;
+    color: #ecb1c9;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 400px;
+    min-height: 200px;
+    padding: 2rem;
+    border-radius: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    
+}
+
+.card__face--front {
+    background: #84dfeb;
+    border-radius: 3%;
+    
+ 
+}
+
+.card__face--back {
+    background: rgb(149, 177, 240);
+    box-shadow: 5px 5px rgb(238, 238, 238);
+    transform: rotateY(180deg);
+}
+
+.user-question h2 {
+    margin-top: 3rem;
+}
+
+.user-question h4 {
+    text-decoration: underline;
+}
+
+.user-question .user-question form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.user-question form textarea {
+    width: 60%;
+    padding: 1rem;
+    border: 1px solid darkgray;
+    background: #F0F0F0;
+}
+
+.user-question form .submit-button {
+    margin: 2rem auto;
+    padding: 1.5rem;
+
+    display: block;
+
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+    border: 0;
+
+    background: #A22442;
+
+    text-decoration: none;
+    outline: none;
+    box-shadow: 2px 2px #DBDBDB;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+.user-question form .submit-button:hover {
+    background: #81122C;
+}
+
+.user-question form .submit-button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .card {
+        margin: 2rem;
+        font-size: 1rem;
+    }
+
+    .card__face {
+        min-width: 50px;
+        max-width: 95%;
+        min-height: 100px;
+    }
+}
