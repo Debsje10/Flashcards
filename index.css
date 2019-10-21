@@ -93,7 +93,7 @@ button:active {
 }
 
 .card.is-flipped {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
 }
 
 .card__face {
@@ -115,16 +115,26 @@ button:active {
 }
 
 .card__face--front {
-    background: #84dfeb;
+    background: #8ec5df;
     border-radius: 3%;
     
  
 }
 
+
+.on {
+	transform: rotateX(-180deg);
+}
+
+.off {
+	transform: rotateX(0deg);
+}
+
 .card__face--back {
-    background: rgb(149, 177, 240);
+    background: #82c5e4;
     box-shadow: 5px 5px rgb(238, 238, 238);
     transform: rotateY(180deg);
+    border-radius: 3%;
 }
 
 .user-question h2 {
