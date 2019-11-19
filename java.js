@@ -23,44 +23,58 @@ function lekkerDraaien() {
     }
 }   
 
+
+
 let question1 = 
 `How much is 2 + 2`
 
-let awnser1 =
+let anwser1 =
 `4`
 
 let question2 = 
-`How much is 4 + 2`
+`How much is 7 + 2`
 
-let awnser2 = 
-`6`
+let anwser2 = 
+`9`
+
+
+
    
 
 function showQuestion1(){
     answerElement.innerHTML = question1
-    questionElement.innerHTML = awnser1
+    questionElement.innerHTML = anwser1
+    
     
 }
+
 
 function showQuestion2(){
     answerElement.innerHTML = question2
-    questionElement.innerHTML = awnser2
+    questionElement.innerHTML = anwser2
+
+}
     
-}
+    
+
+var ispurple = true;
 
 
-newQuestion.addEventListener('click', showQuestion1);
-resetCards.addEventListener('click', clearLocalUserStorage);
-
-
-// empty localStorage
-function clearLocalUserStorage() {
-    confirmedClear = confirm(
-        'Are you sure you want to delete all the flashcards ?'
-    );
-    if (confirmedClear) {
-        showQuestion1.clear();
-        jumpToAnchor('top');
-        alert("And we're back to the standard flashcards!");
+newQuestion.addEventListener('click', function() {
+    if (ispurple) {
+        answerElement.innerHTML = question1
+        questionElement.innerHTML = anwser1
+        
     }
+    
+    else { 
+        answerElement.innerHTML = question2
+        questionElement.innerHTML = anwser2
+
+    }
+
+    
+    ispurple = !ispurple;
 }
+
+)
